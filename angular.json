@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nameplate-site"
+    }
+  },
+  "defaultProject": "nameplate-site",
+  "cli": {
+    "analytics": false
+  }
 }
