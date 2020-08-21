@@ -5,16 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {DemoMaterialModule} from './material-module';
+import { DarkModeService } from './services/darkmode.service';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { SidenavService } from './sidenav/sidenav.service';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DemoMaterialModule
   ],
-  providers: [],
+  providers: [SidenavService,DarkModeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
