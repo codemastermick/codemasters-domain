@@ -1,16 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarComponent } from './toolbar.component';
+import { SidenavService } from '../sidenav/sidenav.service';
+import { MatMenuModule } from '@angular/material/menu';
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
   let fixture: ComponentFixture<ToolbarComponent>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     TestBed.configureTestingModule({
-      declarations: [ ToolbarComponent ]
-    })
-    .compileComponents();
+      providers: [SidenavService],
+      declarations: [ToolbarComponent],
+      imports: [MatMenuModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidenavComponent } from './sidenav.component';
+import { SidenavService } from './sidenav.service';
 
 describe('SidenavComponent', () => {
   let component: SidenavComponent;
@@ -8,6 +9,7 @@ describe('SidenavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      providers:[SidenavService],
       declarations: [ SidenavComponent ]
     })
     .compileComponents();
