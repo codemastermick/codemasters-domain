@@ -25,4 +25,13 @@ describe('ToolbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a light and dark theme', () => {
+    expect(component.themes.length).toEqual(2);
+  });
+
+  // it('should have a theme switcher', () => {
+  //   // find button trigger for mat-menu
+  //   // check button text for 'Change theme'
+  // });
 });
