@@ -11,6 +11,7 @@ export class ProjectCardComponent implements OnInit {
   @Input() description:string;
   @Input() projecturl:string;
   @Input() avatarurl:string;
+  @Input() projectrepo:string;
 
   constructor() { }
 
