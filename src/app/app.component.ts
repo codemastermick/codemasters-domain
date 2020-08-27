@@ -11,6 +11,7 @@ import { DarkModeService } from './services/darkmode.service';
 export class AppComponent implements OnInit, OnDestroy {
   title = "Codemaster Mick's Domain";
   themingSubscription: Subscription;
+  underConstruction = true;
 
   constructor(
     private themingService: DarkModeService,

@@ -2,7 +2,12 @@
   <app-sidenav>
     <app-toolbar></app-toolbar>
     <main>
-      <mat-card class="info">{{title}} is undergoing active development. Your patience is appreciated while we get this done.</mat-card>
+      <div *ngIf="underConstruction == true">
+        <mat-card class="info"
+          >{{ title }} is undergoing active development. Your patience is
+          appreciated while we get this done.</mat-card
+        >
+      </div>
       <mat-card>
         <div>
           <h2>Date picker</h2>
