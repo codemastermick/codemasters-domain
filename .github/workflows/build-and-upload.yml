@@ -26,8 +26,8 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v1
         with:
-          name: dist
-          path: dist
+          name: deploy_dist
+          path: dist/nameplate-site
     #   - name: Archive code coverage result
     #     if: success()
     #     uses: actions/upload-artifact@v1
@@ -46,5 +46,5 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: dist/nameplate-site
+          localDir: deploy_dist
           remoteDir: "www"
