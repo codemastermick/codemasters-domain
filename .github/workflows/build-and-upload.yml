@@ -51,4 +51,4 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: deploy_dist/nameplate-site
-          remoteDir: "www"
+          remoteDir: www
