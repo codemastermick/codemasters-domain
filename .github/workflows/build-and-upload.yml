@@ -12,28 +12,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Use Node 12.x
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+
       - name: Install dependencies
         run: npm ci
+
       - name: Build
         run: npm run build --if-present
+
       - name: Test
         run: npm run test:ci
+
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
         with:
           name: deploy_dist
           path: dist/
+
       - name: Archive code coverage result
         if: success()
         uses: actions/upload-artifact@v1
         with:
           name: deploy_coverage
           path: coverage
+
   deploy:
     name: Deploy
     needs: build
@@ -44,11 +51,12 @@ jobs:
         with:
           name: deploy_dist
       - uses: actions/checkout@v2
+
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: nameplate-site
+          localDir: deploy_dist
           remoteDir: www
