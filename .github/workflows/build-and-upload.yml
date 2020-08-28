@@ -28,16 +28,16 @@ jobs:
         with:
           name: deploy_dist
           path: dist/
-    #   - name: Archive code coverage result
-    #     if: success()
-    #     uses: actions/upload-artifact@v1
-    #     with:
-    #       name: deploy_coverage
-    #       path: coverage
+      - name: Archive code coverage result
+        if: success()
+        uses: actions/upload-artifact@v1
+        with:
+          name: deploy_coverage
+          path: coverage
   deploy:
     name: Deploy
     needs: build
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v2
@@ -50,5 +50,5 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: codemasters_domain
+          localDir: codemasters-domain/deploy_dist
           remoteDir: "www"
