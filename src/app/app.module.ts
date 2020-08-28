@@ -13,6 +13,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SidenavService } from './sidenav/sidenav.service';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ProjectViewComponent } from './pages/project-view/project-view.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     ToolbarComponent,
     SidenavComponent,
     ProjectCardComponent,
+    ProjectViewComponent,
   ],
   imports: [
     BrowserModule,

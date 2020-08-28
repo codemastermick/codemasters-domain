@@ -1,19 +1,25 @@
-<div class="app">
+<div class="app" fxLayout="column">
   <app-sidenav>
     <app-toolbar></app-toolbar>
     <main>
-      <div *ngIf="underConstruction == true">
-        <mat-card class="info"
-          >{{ title }} is undergoing active development. Your patience is
-          appreciated while we get this done.</mat-card
-        >
-      </div>
-      <mat-card>
+      <mat-card class="info" *ngIf="underConstruction == true"
+        >{{ title }} is undergoing active development. Your patience is
+        appreciated while we get this done.</mat-card
+      >
+      <app-project-view></app-project-view>
+      <!-- <mat-card>
         <div>
           <h2>Date picker</h2>
           <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              placeholder="Choose a date"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
         </div>
@@ -27,7 +33,7 @@
             <mat-chip color="accent" selected>Accent fish</mat-chip>
           </mat-chip-list>
         </div>
-      </mat-card>
+      </mat-card> -->
     </main>
   </app-sidenav>
 </div>
