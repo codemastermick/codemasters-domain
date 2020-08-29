@@ -51,6 +51,13 @@ jobs:
         name: deploy_coverage
         path: coverage
 
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       with:
@@ -61,23 +68,14 @@ jobs:
         # name: codecov-umbrella # optional
         fail_ci_if_error: true # optional (default = false)
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: deploy_dist
-
-      - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          localDir: nameplate-site
-          remoteDir: /var/www/html
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: nameplate-site
+        REMOTE_DIR: /var/www/html
+        METHOD: sftp
+        PORT: 22
+        ARGS: --delete
