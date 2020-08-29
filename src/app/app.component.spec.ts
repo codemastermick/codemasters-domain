@@ -32,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.info').textContent).toContain("Codemaster Mick's Domain is undergoing active development. Your patience is appreciated while we get this done.");
+    expect(compiled.querySelector('.info').textContent).toContain("Codemaster Mick's Domain is undergoing active development. Your patience is appreciated while I get this done.");
   });
 });
