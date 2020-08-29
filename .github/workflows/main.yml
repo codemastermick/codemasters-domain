@@ -51,13 +51,6 @@ jobs:
         name: deploy_coverage
         path: coverage
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       with:
@@ -67,6 +60,18 @@ jobs:
         # flags: unittests # optional
         # name: codecov-umbrella # optional
         fail_ci_if_error: true # optional (default = false)
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Download compiled artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: deploy_dist
 
     - name: Publish via FTP
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
