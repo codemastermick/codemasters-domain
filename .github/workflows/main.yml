@@ -68,7 +68,7 @@ jobs:
         # name: codecov-umbrella # optional
         fail_ci_if_error: true # optional (default = false)
 
-    - name: FTP-Deploy-Action
+    - name: Publish via FTP
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
