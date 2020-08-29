@@ -23,8 +23,12 @@
       <button mat-button>Project website</button>
     </a>
 
-    <a href="{{ projectrepo }}" *ngIf="projectrepo">
+    <a href="{{ projectrepo }}" *ngIf="projectrepo; else privaterepo">
       <button mat-button>Public code repository</button>
     </a>
+
+    <ng-template #privaterepo>
+      <button mat-button disabled>Code is private</button>
+    </ng-template>
   </div>
 </div>
