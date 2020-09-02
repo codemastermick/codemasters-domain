@@ -9,8 +9,9 @@ a {
   font-size: 1rem;
 }
 
-.title, .subtitle{
-    padding: 0.5rem 0.5rem 0.25rem;
+.title,
+.subtitle {
+  padding: 0.5rem 0.5rem 0.25rem;
 }
 
 .projectcard {
@@ -32,8 +33,14 @@ a {
   padding: 0rem 1rem 0rem;
 }
 
-.spacer{
-    flex: 1 1 auto;
+.desc > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spacer {
+  flex: 1 1 auto;
 }
 
 .projectcard:hover {
@@ -56,6 +63,12 @@ a {
     transition: all 0.1s linear;
     font-size: 1.1rem;
     font-style: normal;
+  }
+
+  .desc > p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow:inherit;
   }
 }
 
