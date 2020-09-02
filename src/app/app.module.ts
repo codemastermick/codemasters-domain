@@ -14,6 +14,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { SidenavService } from './sidenav/sidenav.service';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectViewComponent } from './pages/project-view/project-view.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProjectViewComponent } from './pages/project-view/project-view.componen
     SidenavComponent,
     ProjectCardComponent,
     ProjectViewComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
