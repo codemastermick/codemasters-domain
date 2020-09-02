@@ -1,4 +1,7 @@
 # NameplateSite
+[![Actions Status](https://github.com/codemastermick/codemasters-domain/workflows/Build,%20Test%20and%20Publish/badge.svg)](https://github.com/codemastermick/codemasters-domain/actions)
+[![codecov](https://codecov.io/gh/codemastermick/codemasters-domain/branch/master/graph/badge.svg?token=3BW76HU3NZ)](https://codecov.io/gh/codemastermick/codemasters-domain)
+![Website](https://img.shields.io/website?down_message=offline&up_message=operational&url=https%3A%2F%2Fcodemastermick.com)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
