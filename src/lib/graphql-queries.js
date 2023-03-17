@@ -7,7 +7,11 @@ export const authorsQuery = gql`
       bio
       slug
       picture {
-        url
+        url(
+          transformation:{
+            document:{output:{format:webp}}
+          }
+        )
       }
     }
   }
@@ -22,7 +26,12 @@ const PROJECT_FRAGMENT = gql`
     demo
     sourceCode
     image {
-      url
+      url(
+        transformation: {
+            image: { resize: { width: 330, height: 136, fit: clip } }
+            document:{output:{format:webp}}
+          }
+      )
     }
   }
 `
