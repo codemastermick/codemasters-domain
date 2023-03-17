@@ -93,6 +93,8 @@
       {/if}
     </div>
 
+    <a href="rss.xml">Subscribe to get the latest updates</a>
+
     <p>
       Copyright &copy; {copydate} | All right reserved {AuthorName}
     </p>
