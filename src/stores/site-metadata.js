@@ -38,6 +38,5 @@ export const fetchPostTags = async () => {
       }
     })
   });
-  console.log(tags)
   return postTagStore.set(tags)
 }

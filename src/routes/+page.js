@@ -19,7 +19,6 @@ export const load = async () => {
   const { authors } = authorRes
   const { projects } = projectsRes
   const { tags } = tagsRes
-  console.log(tags)
 
   return {
     projects,
