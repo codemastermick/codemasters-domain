@@ -1,10 +1,10 @@
-# Hygraph SvelteKit Portfolio and Blog Starter
+# Codemaster Mick's Portfolio and Blog
 
 > Minimalist Developer Portfolio and Blog built with SvelteKit,
 > Tailwind, daisyUI, and deployed to Vercel.
 
-[![Clone project](https://hygraph.com/button)](https://app.hygraph.com/clone/77e3a126472d443bad40b9e4cac85243?name=Developer%20Portfolio%20%26%20Blog)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/hygraph/hygraph-sveltekit-portfolio-and-blog-starter&env=VITE_HYGRAPH_ENDPOINT)
+<!-- [![Clone project](https://hygraph.com/button)](https://app.hygraph.com/clone/77e3a126472d443bad40b9e4cac85243?name=Developer%20Portfolio%20%26%20Blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/hygraph/hygraph-sveltekit-portfolio-and-blog-starter&env=VITE_HYGRAPH_ENDPOINT) -->
 
 ## The stack
 
