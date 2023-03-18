@@ -15,15 +15,21 @@
       tabindex="-2"
       class="bg-neutral rounded-box shadow text-neutral-content p-2 w-52 menu dropdown-content "
     >
-      <a class="btn btn-ghost btn-sm rounded-btn" href="/projects">
-        Portfolio
-      </a>
-      <a class="btn btn-ghost btn-sm rounded-btn" href="/posts">
-        Blog
-      </a>
-      <a class="btn btn-ghost btn-sm rounded-btn" href="/about">
-        About
-      </a>
+      <li>
+        <a class="btn btn-ghost btn-sm rounded-btn" href="/projects">
+          Portfolio
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-ghost btn-sm rounded-btn" href="/posts">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-ghost btn-sm rounded-btn" href="/about">
+          About
+        </a>
+      </li>
     </ul>
   </div>
 
