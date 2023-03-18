@@ -41,20 +41,6 @@
   class="p-10 footer bg-primary text-primary-content footer-center"
 >
   <div>
-    <!-- Buy Me A Coffee widget -->
-    <script
-      data-name="BMC-Widget"
-      data-cfasync="false"
-      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-      data-id="CodemasterMick"
-      data-description="Support me on Buy me a coffee!"
-      data-message="Buy the Codemaster a coffee and help keep the content coming!"
-      data-color="#40DCA5"
-      data-position="Right"
-      data-x_margin="18"
-      data-y_margin="18"
-    ></script>
-
     <div class="grid grid-flow-col gap-4">
       {#if twitterUrl}
         <a href={twitterUrl}>
