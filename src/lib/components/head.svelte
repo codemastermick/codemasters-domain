@@ -20,7 +20,6 @@
 
 <svelte:head>
   <link rel="canonical" href={url} />
-  <!-- Meta Tags Generated via https://heymeta.com -->
 
   <!-- HTML Meta Tags -->
   <title>{title}</title>
@@ -49,4 +48,7 @@
 
   <!-- Monetization -->
   <!-- <meta name="monetization" content="$ilp.uphold.com/bzPBWkMBzLmN" /> -->
+
+  <!-- Special link to help Mastodon identify us as the site owner -->
+  <link href="https://techhub.social/@codemastermick" rel="me" />
 </svelte:head>
