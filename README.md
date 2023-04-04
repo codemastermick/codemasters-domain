@@ -22,9 +22,9 @@ Portfolio and Blog starter.
 1. Clone the repository and install the project dependencies
 
 ```
-npx degit Hygraph/hygraph-sveltekit-portfolio-and-blog-starter#main portfolio
+npx degit codemastermick/codemasters-domain#main portfolio
 cd portfolio
-pnpm i
+npm i
 ```
 
 2. Provide your Hygraph project keys
@@ -45,5 +45,5 @@ endpoint to the `VITE_HYGRAPH_ENDPOINT` variable. You can find it on
 3. Start building 🎉
 
 ```
-pnpm dev
+npm run dev
 ```
