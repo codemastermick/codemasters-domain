@@ -22,7 +22,7 @@
     "daisyui": "^2.51.5",
     "graphql": "^16.3.0",
     "graphql-request": "^5.2.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.3",
     "marked": "^4.0.12",
     "postcss": "^8.4.6",
     "postcss-load-config": "^4.0.1",
